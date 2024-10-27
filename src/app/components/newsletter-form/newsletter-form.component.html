@@ -1,0 +1,14 @@
+<section class="form-section">
+  <div class="text">
+    <h3>Fique por dentro das tendências.</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi id, quidem cupiditate quibusdam, iure consectetur provident debitis quia, sint architecto ducimus. Pariatur consectetur aliquid cupiditate repellat asperiores, ipsum voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi velit quam nulla? Eaque eligendi architecto quasi, sint officia sunt laborum, placeat sit repellendus qui earum deserunt tempore asperiores cum in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus delectus ad hic omnis tenetur et eaque, a maxime iusto voluptatibus quidem animi dolorem cupiditate sit quibusdam commodi sed esse officia?</p>
+  </div>
+
+  <form [formGroup]="newsLetterForm">
+    <label for="name">Nome</label>
+    <input id="name" formControlName="name">
+    <label for="email">E-mail</label>
+    <input id="email" formControlName="email">
+    <app-btn-primary btn-text="Se inscreva" variant="secondary" (submit)="onSubmit()" [disable]="!newsLetterForm.valid"></app-btn-primary>
+  </form>
+</section>
